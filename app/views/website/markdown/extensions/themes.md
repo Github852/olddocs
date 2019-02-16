@@ -1,55 +1,81 @@
 Themes allow you to customize the look and feel of the Standard Notes app on all platforms.
 
-## Web/Desktop Themes
-
 You can view the [source code](https://github.com/sn-extensions/solarized-dark-theme) of our official themes in order to best understand how to create your own theme.
 
 For how to install a theme, please see [Publishing](/extensions/publishing).
 
-## Mobile Themes
+## Web/Desktop Themes
 
-Mobile themes offer control mostly on colors. They are simply JSON files hosted on a server.
+Themes are simple CSS files which override a few variables to style the look of the application. CSS themes will automatically work on mobile. Your CSS file should contain content similar to the below.
 
-### JSON Format:
+_Note that font and font sizes do not apply to mobile; only desktop/web._
 
-``` json
-{
-  name: "Midnight",
-  constants: {
-    mainTintColor: "#fffdff",
-    mainBackgroundColor: "#171925",
-    mainTextColor: "#bbbdcb",
-    navBarColor: "#171925",
-    mainDimColor: "#363b53",
-    navBarTextColor: "#fffdff",
-    plainCellBorderColor: "#1d1f2f",
-    selectedBackgroundColor: "#292b3a",
-    composeBorderColor: "#1b1b1b"
-  },
+```
+:root {
+  --sn-stylekit-base-font-size: 14px;
 
-  rules: {
+  --sn-stylekit-font-size-p: 1.0rem;
+  --sn-stylekit-font-size-editor: 1.21rem;
 
-  },
+  --sn-stylekit-font-size-h6: 0.8rem;
+  --sn-stylekit-font-size-h5: 0.9rem;
+  --sn-stylekit-font-size-h4: 1.0rem;
+  --sn-stylekit-font-size-h3: 1.1rem;
+  --sn-stylekit-font-size-h2: 1.2rem;
+  --sn-stylekit-font-size-h1: 1.3rem;
 
-  statusBar: "light-content"
+  --sn-stylekit-neutral-color: #989898;
+  --sn-stylekit-neutral-contrast-color: white;
+
+  --sn-stylekit-info-color: #086DD6;
+  --sn-stylekit-info-contrast-color: white;
+
+  --sn-stylekit-success-color: #2B9612;
+  --sn-stylekit-success-contrast-color: white;
+
+  --sn-stylekit-warning-color: #f6a200;
+  --sn-stylekit-warning-contrast-color: white;
+
+  --sn-stylekit-danger-color: #F80324;
+  --sn-stylekit-danger-contrast-color: white;
+
+  --sn-stylekit-shadow-color: #C8C8C8;
+  --sn-stylekit-background-color: white;
+  --sn-stylekit-border-color: #e3e3e3;
+  --sn-stylekit-foreground-color: black;
+
+  --sn-stylekit-contrast-background-color: #F6F6F6;
+  --sn-stylekit-contrast-foreground-color: #2e2e2e;
+  --sn-stylekit-contrast-border-color: #e3e3e3;
+
+  --sn-stylekit-secondary-background-color: #F6F6F6;
+  --sn-stylekit-secondary-foreground-color: #2e2e2e;
+  --sn-stylekit-secondary-border-color: #e3e3e3;
+
+  --sn-stylekit-secondary-contrast-background-color: #e3e3e3;
+  --sn-stylekit-secondary-contrast-foreground-color: #2e2e2e;
+  --sn-styleki--secondary-contrast-border-color: #a2a2a2;
+
+  --sn-stylekit-editor-background-color: var(--sn-stylekit-background-color);
+  --sn-stylekit-editor-foreground-color: var(--sn-stylekit-foreground-color);
+
+  --sn-stylekit-paragraph-text-color: #454545;
+
+  --sn-stylekit-input-placeholder-color: rgb(168, 168, 168);
+  --sn-stylekit-input-border-color: #e3e3e3;
+
+  --sn-stylekit-scrollbar-thumb-color: #dfdfdf;
+  --sn-stylekit-scrollbar-track-border-color: #E7E7E7;
+
+  --sn-stylekit-general-border-radius: 2px;
+
+  --sn-stylekit-monospace-font: "Ubuntu Mono", courier, monospace;
+  --sn-stylekit-sans-serif-font: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 ```
-
-Mobile themes are installed the same way regular themes are installed. In fact, when you install a regular css theme, the mobile app will use the same link, but replace `.css` with `.json`:
-
-When you install
-
-```
-https://host.org/theme.css
-```
-
-the mobile app will look for
-
-```
-https://host.org/theme.json
-```
-
-and automatically display it in the themes list. If the server does not respond to the url, the mobile app will disable that theme and gray it out in the list.
 
 ### Reloading Mobile Themes
 
