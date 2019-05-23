@@ -1,3 +1,5 @@
+_Note: This guide is largely outdated. One wishing to create a client for Standard File/Standard Notes should use [SFJS](https://github.com/standardfile/sfjs/)._
+
 ## Standard File — Client Development Guide
 
 This guide walks through the essentials of building an application that consumes a Standard File API. This code is based on the Standard Notes client, and uses a non-compileable Javascript-ish pseudocode.

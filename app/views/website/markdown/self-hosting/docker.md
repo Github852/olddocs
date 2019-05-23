@@ -57,8 +57,6 @@ These instructions make the following assumptions:
    DB_DATABASE=items
    DB_USERNAME=root
    DB_PASSWORD=
-
-   SALT_PSEUDO_NONCE=use "bundle exec rake secret"
    ```
 
    ``` bash

@@ -3,7 +3,11 @@ Instead of setting up a server from scratch, you can use our public Amazon Machi
 This article assumes you have some experience using the AWS console, so it won't go into too much detail about that interface.
 
 You should also have a domain or subdomain you'll be using for the server.
+
+**Important:** This AMI is available only in the US-East N. Virginia region. After launching the image, you will need to update the software to catch up with new releases.
+
 ## Launching the instance
+
 1. In the EC2 console, under "Images", select the "AMIs" menu item.
 
 2. In the search bar, change the dropdown to search in "Public images". Then type `AMI ID : ami-4badcd5d` and hit enter.
@@ -66,6 +70,15 @@ You should also have a domain or subdomain you'll be using for the server.
 	```
 
 	**Change domain.com with your domain.**
+
+1. Update code with latest releases:
+
+	```
+	cd ~/ruby-server
+	git pull
+	bundle install
+	bundle exec rails db:migrate RAILS_ENV=production
+	```
 
 1. Start nginx:
 

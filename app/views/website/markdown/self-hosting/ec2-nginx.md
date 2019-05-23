@@ -178,8 +178,6 @@ Note: You can skip most of these steps by using our public AMI. See the followin
 	DB_DATABASE=standard_file
 	DB_USERNAME=root
 	DB_PASSWORD=
-
-	SALT_PSEUDO_NONCE=use "bundle exec rake secret"
 	```
 
 1. Setup database:

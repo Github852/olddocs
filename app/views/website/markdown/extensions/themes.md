@@ -4,9 +4,9 @@ You can view the [source code](https://github.com/sn-extensions/solarized-dark-t
 
 For how to install a theme, please see [Publishing](/extensions/publishing).
 
-## Web/Desktop Themes
+## Creating a theme
 
-Themes are simple CSS files which override a few variables to style the look of the application. CSS themes will automatically work on mobile. Your CSS file should contain content similar to the below.
+Themes are simple CSS files which override a few variables to style the look of the application. **CSS themes will automatically work on mobile.** Your CSS file should contain content similar to the below.
 
 _Note that font and font sizes do not apply to mobile; only desktop/web._
 
