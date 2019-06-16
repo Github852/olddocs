@@ -101,19 +101,19 @@ These instructions make the following assumptions:
 
 10. Access the server locally:
 
-   ``` bash
-   $ curl {domain name}
-   <!doctype html>
-   <html>
-     ...
-     <body>
-       <h1> Hi! You're not supposed to be here. </h1>
+    ``` bash
+    $ curl {domain name}
+    <!doctype html>
+    <html>
+      ...
+      <body>
+        <h1> Hi! You're not supposed to be here. </h1>
 
-       <p> You might be looking for the <a href="https://app.standardnotes.org"> Standard Notes Web App</a> or the main <a href="https://standardnotes.org"> Standard Notes Website</a>. </p>
+        <p> You might be looking for the <a href="https://app.standardnotes.org"> Standard Notes Web App</a> or the main <a href="https://standardnotes.org"> Standard Notes Website</a>. </p>
 
-     </body>
-   </html>
-   ```
+      </body>
+    </html>
+    ```
 
 11. You're done!
 
