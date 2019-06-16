@@ -72,7 +72,7 @@ These instructions make the following assumptions:
    $ docker-compose build
    ```
 
-6. Run the `app` service to compile the assets:
+7. Run the `app` service to compile the assets:
 
    ``` bash
    $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up app -d
@@ -87,35 +87,35 @@ These instructions make the following assumptions:
    $ docker-compose down
    ```
 
-6. Start the services:
+8. Start the services:
 
    ``` bash
    $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
    ```
 
-7. Login to the `app` service to initialize the project:
+9. Login to the `app` service to initialize the project:
 
    ``` bash
    $ docker-compose exec app bundle exec rake db:create db:migrate
    ```
 
-8. Access the server locally:
+10. Access the server locally:
 
-  ``` bash
-  $ curl {domain name}
-  <!doctype html>
-  <html>
-    ...
-    <body>
-      <h1> Hi! You're not supposed to be here. </h1>
+   ``` bash
+   $ curl {domain name}
+   <!doctype html>
+   <html>
+     ...
+     <body>
+       <h1> Hi! You're not supposed to be here. </h1>
 
-      <p> You might be looking for the <a href="https://app.standardnotes.org"> Standard Notes Web App</a> or the main <a href="https://standardnotes.org"> Standard Notes Website</a>. </p>
+       <p> You might be looking for the <a href="https://app.standardnotes.org"> Standard Notes Web App</a> or the main <a href="https://standardnotes.org"> Standard Notes Website</a>. </p>
 
-    </body>
-  </html>
-  ```
+     </body>
+   </html>
+   ```
 
-9. You're done!
+11. You're done!
 
 ### Using your new server
 
