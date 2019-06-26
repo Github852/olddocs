@@ -38,8 +38,8 @@ These instructions make the following assumptions:
 
    ``` bash
    $ cd $PROJECT_ROOT/docker/environments/
-   $ cp .env.app.producion.template .env.app.production
-   $ cp .env.db.producion.template .env.db.production
+   $ cp .env.app.production.template .env.app.production
+   $ cp .env.db.production.template .env.db.production
    ```
 
    Ensure that the `.env.app.production` file contains the below environment variables:
@@ -75,7 +75,7 @@ These instructions make the following assumptions:
 7. Run the `app` service to compile the assets:
 
    ``` bash
-   $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up app -d
+   $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d app
    $ docker-compose exec app bundle exec rake assets:precompile
    ```
 
