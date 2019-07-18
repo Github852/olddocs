@@ -22,6 +22,6 @@ There are 3 main types of extensions:
 
     **[Developing a theme →](/extensions/themes)**
 
-3. **Actions**: Actions are an API-based extension interface that are accessible via the Actions menu in the note pane. Actions are triggered manually by the user by selecting an action from the list, and have the ability to interface with the current note and send or retrieve content from a remote server. We use actions for places such as [Listed](https://listed.standardnotes.org), which is our blogging platform for Standard Notes users.
+3. **Actions**: Actions are an API-based extension interface that are accessible via the Actions menu in the note pane. Actions are triggered manually by the user by selecting an action from the list, and have the ability to interface with the current note and send or retrieve content from a remote server. We use actions for places such as [Listed](https://listed.to), which is our blogging platform for Standard Notes users.
 
     **[Developing an action →](/extensions/actions)**

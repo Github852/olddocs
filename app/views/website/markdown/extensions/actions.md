@@ -90,7 +90,7 @@ In this example, we'll recreate a simple clone of Listed.
       }
       )
 
-      description = "Publishes to listed.standardnotes.org. Requires decrypted access to publishing note."
+      description = "Publishes to listed.to. Requires decrypted access to publishing note."
       render :json => {:name => name, :description => description, :supported_types => supported_types, :actions => actions}
     end
     ```

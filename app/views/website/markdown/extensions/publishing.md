@@ -20,13 +20,13 @@ metatype: json
   "description": "A fully featured Markdown editor that supports live preview, a styling toolbar, and split pane support.",
   "url": "https://domain.org/link-to-hosted-extension",
   "download_url": "https://github.com/sn-extensions/advanced-markdown-editor/archive/1.0.184.zip",
-  "latest_url": "https://listed.standardnotes.org/my-extension-json-link",
+  "latest_url": "https://listed.to/my-extension-json-link",
   "marketing_url": "https://standardnotes.org/extensions/advanced-markdown",
   "thumbnail_url": "https://domain.org/editors/adv-markdown.jpg"
 }
 ```
 
-1. Head over to [listed.standardnotes.org](https://listed.standardnotes.org), and generate an account by clicking "Generate Author Link". Copy that link, then, in the Extensions menu in Standard Notes, click "Import Extension" in the bottom right corner. Paste in your link, and press enter, then accept.
+1. Head over to [listed.to](https://listed.to), and generate an account by clicking "Generate Author Link". Copy that link, then, in the Extensions menu in Standard Notes, click "Import Extension" in the bottom right corner. Paste in your link, and press enter, then accept.
 
 2. Back in your "my-extension.json" note, click "Actions" in the menu bar below the note title, then click "Publish to Private Link". Click "Open Private Link" to preview your JSON endpoint.
 
@@ -38,7 +38,7 @@ metatype: json
 | :--- | :--- |
 | identifier | A unique, reverse domain style identifier for your extension. |
 | name | The name of your extension. |
-| content\_type | Always SN&#124;Component. |
+| content\_type | Generally SN&#124;Component, or SN&#124;Theme if theme package. |
 | area | One of \[editor-editor, editor-stack, themes, note-tags, tags-list\] |
 | version | The current version of your extension. Needs to match the version in your GitHub repo's package.json file. |
 | description | The description that will be displayed in the Extensions browser. |
