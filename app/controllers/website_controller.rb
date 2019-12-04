@@ -8,7 +8,6 @@ class WebsiteController < ApplicationController
 
   end
 
-
   def template
     path = params[:path]
     root_path = "website/templates"
@@ -47,10 +46,10 @@ class WebsiteController < ApplicationController
             title: "Self Hosting with Docker",
             markdown: "self-hosting/docker.md"
           },
-          {
-            title: "Self Hosting on AWS with a Preconfigured Image",
-            markdown: "self-hosting/preconfigured-image.md"
-          },
+          # {
+          #   title: "Self Hosting on AWS with a Preconfigured Image",
+          #   markdown: "self-hosting/preconfigured-image.md"
+          # },
           {
             title: "Self Hosting with Heroku",
             markdown: "self-hosting/heroku.md"
@@ -88,15 +87,15 @@ class WebsiteController < ApplicationController
       },
 
       {
-        title: "Standard File",
+        title: "Specification",
         pages: [
           {
-            title: "Intro to Standard File",
-            markdown: "standard-file/intro.md"
+            title: "Encryption",
+            markdown: "specification/encryption.md"
           },
           {
-            title: "Client Development Guide",
-            markdown: "standard-file/client-development.md"
+            title: "Sync",
+            markdown: "specification/sync.md"
           }
         ]
       }

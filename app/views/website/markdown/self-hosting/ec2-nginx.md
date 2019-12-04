@@ -5,8 +5,6 @@ These instructions make the following assumptions:
 
 - You've configured a domain name (or subdomain) to point to your server's IP address.
 
-Note: You can skip most of these steps by using our public AMI. See the following guide for more details: [Deploying a Standard File server on AWS with a pre configured image](https://github.com/standardfile/ruby-server/wiki/Deploying-a-Standard-File-server-on-AWS-with-a-pre-configured-image)
-
 ### Getting started
 
 1. SSH into your new server with the keys you should have received after launching an instance:
@@ -71,7 +69,7 @@ Note: You can skip most of these steps by using our public AMI. See the followin
 
     ``` bash
     mysql -u root -p
-    > create database standard_file;
+    > create database standard_notes;
     > quit;
     ```
 
@@ -141,17 +139,17 @@ Note: You can skip most of these steps by using our public AMI. See the followin
 	    server_name domain.com;
 	    passenger_enabled on;
 	    passenger_app_env production;
-	    root /home/ec2-user/ruby-server/public;
+	    root /home/ec2-user/syncing-server/public;
 	  }
 	```
 
 
-1. Make sure you are in your home directory and clone the Standard File [ruby-server](https://github.com/standardfile/ruby-server) project:
+1. Make sure you are in your home directory and clone the Standard Notes [syncing-server](https://github.com/standardnotes/syncing-server) project:
 
 	``` bash
 	cd ~
-  	git clone https://github.com/standardfile/ruby-server.git
-	cd ruby-server
+  	git clone https://github.com/standardnotes/syncing-server.git
+	cd syncing-server
 	```
 
 1. Setup project:
@@ -175,7 +173,7 @@ Note: You can skip most of these steps by using our public AMI. See the followin
 
 	DB_HOST=localhost
 	DB_PORT=3306
-	DB_DATABASE=standard_file
+	DB_DATABASE=standard_notes
 	DB_USERNAME=root
 	DB_PASSWORD=
 	```
@@ -204,4 +202,4 @@ You can immediately start using your new server by using the Standard Notes app 
 
 In the Account menu, enter the address of your new server in "Sync Server Domain" under "Advanced Options".
 
-Then, register for a new account, and begin using your private new secure Standard File server!
+Then, register for a new account, and begin using your private new secure Standard Notes server!

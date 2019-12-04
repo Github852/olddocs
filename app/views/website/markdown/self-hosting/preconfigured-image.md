@@ -1,4 +1,4 @@
-Instead of setting up a server from scratch, you can use our public Amazon Machine Image (AMI), which launches (almost) ready to go with a working Standard File server.
+Instead of setting up a server from scratch, you can use our public Amazon Machine Image (AMI), which launches (almost) ready to go with a working Standard Notes server.
 
 This article assumes you have some experience using the AWS console, so it won't go into too much detail about that interface.
 
@@ -12,7 +12,7 @@ You should also have a domain or subdomain you'll be using for the server.
 
 2. In the search bar, change the dropdown to search in "Public images". Then type `AMI ID : ami-4badcd5d` and hit enter.
 
-3. You should see the Standard File AMI result in the list. Select the checkbox to the left of it, and press the blue "Launch" button on top.
+3. You should see the Standard Notes AMI result in the list. Select the checkbox to the left of it, and press the blue "Launch" button on top.
 
 4. Choose an Instance Type. The minimum you should use is the t2.micro, which has 1 GB memory. Anything less and you'll run into problems.
 
@@ -74,7 +74,7 @@ You should also have a domain or subdomain you'll be using for the server.
 1. Update code with latest releases:
 
 	```
-	cd ~/ruby-server
+	cd ~/syncing-server
 	git pull
 	bundle install
 	bundle exec rails db:migrate RAILS_ENV=production
@@ -101,6 +101,6 @@ Some tips on maintenance:
 
 3. You should consider using Amazon RDS for your database instead of a local MySQL server. RDS will take care of backups, and may be more performant.
 
-4. To change which database the Standard File app connects to, you can edit the `.env` file in `~/ruby-server/.env`.
+4. To change which database the Standard Notes app connects to, you can edit the `.env` file in `~/syncing-server/.env`.
 
-This server was created using the instructions available here: [Deploying a private Standard File server with Amazon EC2 and Nginx](https://github.com/standardfile/ruby-server/wiki/Deploying-a-private-Standard-File-server-with-Amazon-EC2-and-Nginx). Consult this guide if you'd like to customize any part of the instance.
+This server was created using the instructions available here: [Deploying a private Standard Notes server with Amazon EC2 and Nginx](https://github.com/standardnotes/syncing-server/wiki/Deploying-a-private-Standard-File-server-with-Amazon-EC2-and-Nginx). Consult this guide if you'd like to customize any part of the instance.

@@ -1,6 +1,6 @@
 1. Configure the Heroku Command Line Interface (CLI) using these steps: [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
-1. Deploy the Standard File server to your account using the following deploy link: https://heroku.com/deploy?template=https://github.com/standardfile/ruby-server
+1. Deploy the Standard Notes server to your account using the following deploy link: https://heroku.com/deploy?template=https://github.com/standardnotes/syncing-server
 
 1. Install a MySQL add-on. Here we'll use the JawsDB add-on: https://elements.heroku.com/addons/jawsdb. If you already have a database, you can skip this step.
 
@@ -31,6 +31,6 @@
 	heroku run rake db:migrate --app name_of_app
 	```
 
-And that's it! You're up and running with a free Standard File server that you can use in [Standard Notes](https://standardnotes.org).
+And that's it! You're up and running with a free Standard Notes server that you can use in [Standard Notes](https://standardnotes.org).
 
 Note that you should understand the limitations of Heroku's free tier. In particular, your instance will sleep after 30 minutes of idleness, and may take several seconds to start up again on subsequent requests.
