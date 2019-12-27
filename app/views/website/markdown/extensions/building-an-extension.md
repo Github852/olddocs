@@ -35,9 +35,11 @@ In this example, we'll use our blank-slate ReactJS template to build a utility b
 
 1. In your browser, open `http://localhost:8080/ext.json`, and ensure that the output matches the file contents of the ext.json file. Most importantly, if your dev server is running on a different port, make sure to update the `url` property of the JSON file to reflect the correct value.
 
-1. In **Standard Notes**, click **Extensions** in the lower left corner of the app, click **Import Extension** in the bottom right of the **Extensions** window, and input your ext.json location: `http://localhost:8080/ext.json`. Then press enter.
+1. In the **Standard Notes** desktop application (browser may not work for this), click **Extensions** in the lower left corner of the app, click **Import Extension** in the bottom right of the **Extensions** window, and input your ext.json location: `http://localhost:8080/ext.json`. Then press enter.
 
 1. In the same window, find your installed extension, then press **Activate** to run it.
+
+1. You should now see "Blank Slate" at the bottom left of your notes. Clicking on it should raise a little window which displays "Your component is ready". If you try in your browser, it is possible that the window instead remains white. This is most likely due to your browser blocking Mixed Content page. Search online for how to enable it for your browser.
 
 More detailed instructions on setting up your local environment can be found in the [Local Setup tutorial](/extensions/local-setup).
 
