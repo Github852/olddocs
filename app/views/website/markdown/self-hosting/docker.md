@@ -34,72 +34,25 @@ These instructions make the following assumptions:
     $ cd syncing-server
     ```
 
-5. Create `.env.{app|db}.production` files in the project's Docker environment directory:
+5. Create `.env.production` file in the project's directory:
 
     ``` bash
-    $ cd $PROJECT_ROOT/docker/environments/
-    $ cp .env.app.production.template .env.app.production
-    $ cp .env.db.production.template .env.db.production
+    $ cp env.sample .env.production
     ```
 
-    Ensure that the `.env.app.production` file contains the below environment variables:
-
+    Generate the `SECRET_KEY_BASE` with:
     ```bash
-    $ cat .env.app.production
-    RAILS_ENV=production
-    SECRET_KEY_BASE=use "bundle exec rake secret"
-    RAILS_SERVE_STATIC_FILES=true
-
-    DB_CONNECTION=mysql
-    DB_HOST=db
-    DB_DATABASE=standardnotes
-    DB_USERNAME=root
-    DB_PASSWORD=
+    $ bundle exec rake secret
     ```
 
-    Ensure that the `.env.db.production` file contains the below environment variable:
+6. Simply run:
 
     ``` bash
-    $ cat .env.db.production
-    MYSQL_ROOT_PASSWORD=
+    $ docker-compose up -d
     ```
+    This should load the `syncing-server` and MySQL database containers and run the necessary migrations.
 
-    If you set a password for the root database user under `DB_PASSWORD` in `.env.db.production`, you must set the same password under `MYSQL_ROOT_PASSWORD` in `.env.db.production`.
-
-6. Build the services without starting them:
-
-    ``` bash
-    $ docker-compose build
-    ```
-
-7. Run the `app` service to compile the assets:
-
-    ``` bash
-    $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d app
-    $ docker-compose exec app bundle exec rake assets:precompile
-    ```
-
-    At this point the precompiled assets are stored in the `public/`
-    folder of the host. The Nginx container will mount the folder as a volume
-    and get the assets.
-
-    ``` bash
-    $ docker-compose down
-    ```
-
-8. Start the services:
-
-    ``` bash
-    $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
-    ```
-
-9. Login to the `app` service to initialize the project:
-
-    ``` bash
-    $ docker-compose exec app bundle exec rake db:create db:migrate
-    ```
-
-10. Access the server locally:
+7. Test your access to the server locally:
 
     ``` bash
     $ curl {domain name}
@@ -115,7 +68,7 @@ These instructions make the following assumptions:
     </html>
     ```
 
-11. You're done!
+8. You're done!
 
 ### Using your new server
 
